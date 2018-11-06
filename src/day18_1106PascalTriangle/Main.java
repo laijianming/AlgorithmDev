@@ -39,15 +39,18 @@ public class Main {
 
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
-        int[][] pascal = new int[n][];
+        if(n < 1 || n > 34){
+            return;
+        }
+        int[][] pascal = new int[n][n];
         for(int i = 0; i < n ; i++){
             System.out.print(1 + " ");
-            pascal[i][1] = 1;
+            pascal[i][0] = 1;
             for(int j = 0;j < i; j++){
-//                System.out.println(pascal = pascal[i][j] + pascal[i][j+1]);
-
-
+                pascal[i][j+1] = pascal[i-1][j] + pascal[i-1][j+1];
+                System.out.print(pascal[i][j+1] + " ");
             }
+            System.out.println();
         }
 
 
