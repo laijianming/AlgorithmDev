@@ -1,4 +1,4 @@
-package day18_1101sort;
+package day18_1101SortAlgorithm;
 
 import org.junit.Test;
 

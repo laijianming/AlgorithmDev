@@ -18,7 +18,6 @@ public class TestIdea {
                 c[j + 1] = c[j];
             c[0] = c[50];
         }
-
     }
 
 }
