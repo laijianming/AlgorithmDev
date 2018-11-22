@@ -1,4 +1,4 @@
-package day18_1022BinaryTree;
+package Astructure.day18_1022BinaryTree;
 
 public class Hello {
 

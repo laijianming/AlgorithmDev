@@ -1,4 +1,4 @@
-package day18_1024MyLinkedList;
+package Astructure.day18_1024MyLinkedList;
 
 /**
  * 线性表：链式存储

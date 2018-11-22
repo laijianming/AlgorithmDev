@@ -1,4 +1,4 @@
-package day18_1023MylinearList;
+package Astructure.day18_1023MylinearList;
 
 import org.junit.Test;
 
