@@ -2,22 +2,50 @@ import java.util.Scanner;
 
 public class TestIdea {
 
+       static int ans;
+       static int[] num = new int[10];
+       static boolean[] visit = new boolean[10];
+       static int count = 1;
+
     public static void main(String[] args) {
-        Scanner cin = new Scanner(System.in);
-        int n = cin.nextInt(), m = cin.nextInt();
-        char c[] = new char[51];
-        for (int i = 0; i < 26; i++) {
-            c[i] = (char) (i + 65);
-            c[50 - i] = (char) (65 + i);
+
+        dfs(0);
+
+
+
+    }
+
+
+    public static void solve(){
+
+        double sum = num[0] + (double)num[1] / num[2] + (double)(num[3]*100+num[4]*10+num[5])/(num[6]*100+num[7]*10+num[8]);
+        System.out.println("come  " + count + "---" + num[0] + num[1] + num[2] + num[3] + num[4]);
+        count++;
+        if(sum == 10)
+        {
+            ans ++;
         }
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++)
-                System.out.print(c[j]);
-            System.out.println();
-            for (int j = 49; j >= 0; j--)
-                c[j + 1] = c[j];
-            c[0] = c[50];
+
+    }
+
+    static void dfs(int index)
+    {
+        if(index == 5)
+        {
+            solve();
+            return ;
+        }
+        for(int i = 1 ; i < 6 ; i ++)
+        {
+            if(!visit[i])
+            {
+                visit[i] = true;
+                num[index] = i;
+                dfs(index+1);
+                visit[i] = false;
+            }
         }
     }
+
 
 }

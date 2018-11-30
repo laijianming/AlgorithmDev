@@ -8,6 +8,7 @@ public class GraphKruskal {
 		edges = new Edge[edgeSize];
 
 	}
+	// 克鲁斯卡尔
 	public void miniSpanTreeKruskal(){
 		int m,n,sum=0;
 		int[] parent = new int[edgeSize];//神奇的数组，下标为起点，值为终点
