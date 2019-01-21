@@ -204,17 +204,20 @@ public class Main {
         }
 
         /**
-         * prim 普里姆算法
+         * 最短路径算法
          */
-        public void prim(int start, int end) {
+        public void shortPath(int start, int end) {
             int[] lowcost = new int[vertexSize];//最小代价顶点权值的数组,为0表示已经获取最小权值
             int[] adjvex = new int[vertexSize];//放顶点权值
+            boolean isgetPath[] = new boolean[vertexSize]; // 判断是否找到了最短路径
             int min, minId, sum = 0;
             StringBuilder minPath = new StringBuilder();
             minPath.append(start);
+            // 拿到该节点与其他节点的连接信息
             for (int i = 1; i < vertexSize; i++) {
                 lowcost[i] = matrix[start][i];
             }
+            // 开始遍历其他的节点
             for (int i = 1; i < end; i++) {
                 min = MAX_WEIGHT;
                 minId = 0;
@@ -302,7 +305,7 @@ public class Main {
         Graph graph = createGraph(nodes, nc);
 
         // 先求出 起点到终点的 最小路径
-        graph.prim(1,3);
+        graph.shortPath(1,3);
 
 
 
