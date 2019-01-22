@@ -1,4 +1,4 @@
-package Astructure.day19_0121List;
+package Astructure.day19_0121List01;
 
 /**
  *  线性表接口
