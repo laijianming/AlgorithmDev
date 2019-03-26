@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AlgorithmDev.iml" filepath="$PROJECT_DIR$/AlgorithmDev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../exchangeShortPath/exchangeShortPath.iml" filepath="$PROJECT_DIR$/../exchangeShortPath/exchangeShortPath.iml" />
     </modules>
   </component>
 </project>

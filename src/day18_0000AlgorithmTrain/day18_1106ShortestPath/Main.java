@@ -1,6 +1,5 @@
 package day18_0000AlgorithmTrain.day18_1106ShortestPath;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {

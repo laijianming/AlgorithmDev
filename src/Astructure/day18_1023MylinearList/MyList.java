@@ -1,4 +1,4 @@
-package day18_1023MylinearList;
+package Astructure.day18_1023MylinearList;
 
 /**
  * 线性表：顺序存取

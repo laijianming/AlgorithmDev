@@ -9,12 +9,16 @@ import java.util.Scanner;
  */
 public class Main {
 
-    public static void main(String[] args) {
+    static int N;
 
+    public static void main(String[] args) {
+        int a = 5;
         Scanner s = new Scanner(System.in);
-        while (true){
+        while (a > 0){
+            a--;
             // 方法1：
             int index = s.nextInt();
+            N = index;
             if(index >= 1 && index <= 1000000){
                 int Fn = 0;
                 int f1 = 1;
@@ -44,6 +48,19 @@ public class Main {
                 }
                 System.out.println(F[n]);
             }
+            // 方法3：递归
+            System.out.println("递归： " + getFn(1,1));
         }
+
+    }
+
+
+    public static int getFn(int fn1,int fn2){
+        if(N - 2 == 0){
+            return fn2;
+        }
+        N--;
+        int fn = (fn1 + fn2) % 10007;
+        return getFn(fn2,fn);
     }
 }

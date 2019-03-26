@@ -1,4 +1,4 @@
-package day18_1024MyLinkedList;
+package Astructure.day18_1024MyLinkedList;
 
 public class TestMyLinkedList {
 

@@ -1,4 +1,4 @@
-package day18_1102Graph;
+package Astructure.day18_1102Graph;
 
 /**
  * 有向图
@@ -22,6 +22,7 @@ public class Graph {
     }
 
     // 获取一个节点的出度
+    // 在邻接矩阵中的该节点行的数组中找 权值不为0和最大权值的 数量即为出度
     public int getOut(int index){
 
         int x = 0;
@@ -34,6 +35,7 @@ public class Graph {
     }
 
     // 获取一个节点的入度
+    // 与出度的查找方式一样，但是是从列的方向上找的
     public int getIn(int index){
         int x = 0;
         for(int i = 0; i < vertexSize; i++){
@@ -45,6 +47,7 @@ public class Graph {
     }
 
     // 获取两个节点间的权值
+    // 直接找该二维坐标的权值即可
     public int getWeight(int v1, int v2){
         int weight = matrix[v1-1][v2-1];
         return (weight == 0) ? 0 : (weight == Graph.MAX_WEIGHT?MAX_WEIGHT:weight);
@@ -53,9 +56,10 @@ public class Graph {
 
     // 插入一个节点
     public void insert(int[] node){
-        if(vertexSize >= MAX_VERTEX_SIZE){
+        if(vertexSize >= MAX_VERTEX_SIZE){ // 若已达最大值，则给数组扩容
             capacity();
         }
+        // 在 邻接矩阵的 最后一行把该节点的一维数组加入即可
         matrix[vertexSize++] = node;
     }
 
@@ -69,6 +73,12 @@ public class Graph {
             matrix[i] = oldMatrix[i];
         }
     }
+
+    // ------------------遍历图
+
+
+
+
 
 
     public static void main(String[] args) {
